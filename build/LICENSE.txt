@@ -1,0 +1,307 @@
+SOFTWARE COMMUNITY LICENSE AGREEMENT
+(SOLIDEAN COMMUNITY EDITION)
+
+This Software Community License Agreement (“Agreement”) is a legally binding agreement between
+Shaped Code GmbH (“Licensor”) and any individual or legal entity that downloads, installs, accesses,
+or uses the Licensed Technology (“Licensee”).
+
+BY DOWNLOADING, INSTALLING, ACCESSING, OR USING THE LICENSED TECHNOLOGY, YOU AGREE TO BE
+BOUND BY THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, ACCESS, OR USE
+THE LICENSED TECHNOLOGY.
+
+Licensor: Shaped Code GmbH, Germany
+Contact: solidean@shapedcode.com
+
+Licensed Technology:
+Solidean Mesh Processing Toolkit (the “Licensed Technology”)
+
+This Community Edition is intended for learning, research, evaluation, and experimentation. 
+It is not a production or commercial license. If the Licensed Technology becomes operationally 
+important to a business, a commercial license is required.
+
+
+---
+
+1. Purpose and Scope
+
+Licensor is the sole proprietor of all exploitation rights in the Licensed Technology.
+
+This Agreement grants Licensee the right to use the Licensed Technology under the terms of the
+Solidean Community Edition. The purpose of this license is to enable broad access to the Licensed
+Technology for research, evaluation, experimentation, and non-commercial use, while reserving
+commercial operation, production use, and deployment for separately licensed agreements.
+
+“Licensee” means any individual or legal entity that downloads, installs, accesses, or uses the
+Licensed Technology.
+
+
+---
+
+2. Permitted Uses (Community Edition)
+
+Subject to the restrictions set forth in this Agreement, Licensee is granted a non-exclusive,
+non-transferable, non-assignable, non-sublicensable right to use the Licensed Technology for the
+following purposes:
+
+a) Personal use, experimentation, and learning.
+
+b) Academic and scientific research, including research conducted at or in cooperation with
+   commercial entities, provided that the Licensed Technology itself is not commercially operated
+   or deployed.
+
+c) Internal evaluation, benchmarking, prototyping, and testing of the Licensed Technology,
+   including integration into experimental or prototype systems.
+
+d) Development and testing of software that integrates with the Licensed Technology, including
+   deployment of such software to internal users or external testers (including beta testers),
+   provided that:
+
+   - the Licensed Technology itself is not redistributed or hosted by Licensee, and
+   - such deployment is for evaluation, testing, or validation purposes and not part of a
+     commercial service or product offering.
+
+e) Open-source software projects may implement optional integration or
+   interoperability with the Licensed Technology, provided that:
+
+   - the Licensed Technology (including any core binary components) is not
+     distributed, bundled, or sublicensed as part of the open-source project;
+   - the open-source project treats the Licensed Technology solely as an
+     optional external dependency that users must obtain separately from
+     Licensor; and
+   - all use of the Licensed Technology remains subject to this Agreement.
+
+   The open-source license governing such projects does not apply to, and does
+   not grant any rights in, the Licensed Technology. For the avoidance of doubt,
+   integration or linking of any technical form does not grant any right to
+   redistribute the core binary components of the Licensed Technology.
+
+The rights granted under this Agreement may not be assigned or transferred, whether by operation
+of law or otherwise, without the prior written consent of Licensor.
+
+
+---
+
+3. Prohibited Uses (Commercial Operation)
+
+Except under a separate written commercial license agreement with Licensor, Licensee may not use
+the Licensed Technology for any form of commercial operation.
+
+“Commercial operation” means use of the Licensed Technology as a required, material, or 
+relied-upon component of:
+
+a) any product or service that is sold, licensed, monetized, or otherwise offered for commercial
+   gain;
+
+b) any hosted service, cloud offering, or software-as-a-service (SaaS) solution, including any
+   form of remote or on-demand access to functionality provided by the Licensed Technology;
+
+c) any internal system, pipeline, or tool that is relied upon for regular business operations,
+   production workflows, manufacturing, service delivery, or revenue-generating activities;
+
+d) any customer-facing deliverable, whether provided directly or indirectly as part of a paid
+   engagement or commercial contract.
+
+Commercial operation is determined by the factual use of the Licensed Technology and is not 
+avoided by indirect use, including use through third-party software, open-source projects, 
+wrappers, or integration layers.
+
+If removal of the Licensed Technology would reasonably be expected to disrupt or prevent the
+delivery of a commercial product, service, or revenue-generating workflow, such use constitutes
+commercial operation and requires a commercial license.
+
+
+---
+
+4. Distribution and Redistribution
+
+Licensee may not distribute, sublicense, rent, lease, lend, sell, or otherwise make available the
+core executable components of the Licensed Technology (including but not limited to shared
+libraries, dynamic libraries, or executables), whether in object, binary, or compiled form, to any
+third party.
+
+This prohibition includes making the Licensed Technology available through hosting, container
+images, virtual machines, download services, or similar mechanisms that allow third parties to
+obtain or use the core binary components.
+
+Source code components provided as part of the Licensed Technology that are not required to execute
+or operate the core functionality (including headers, SDK helpers, examples, and integration
+utilities) may be distributed by Licensee, provided that:
+
+a) such distribution does not include or enable redistribution of the core binary components; and
+b) such distribution does not grant any rights to the core binary components beyond those set forth
+   in this Agreement.
+
+Any reproduction of the Licensed Technology is permitted solely to the extent necessary for lawful
+use under this Agreement, including reasonable backup copies made in accordance with technical
+standards.
+
+
+---
+
+5. Modifications and Reverse Engineering
+
+Licensee may modify software components of the Licensed Technology that are provided in source code
+form, solely for uses permitted under this Agreement.
+
+For the avoidance of doubt, any distribution or disclosure of modified or unmodified components
+remains subject to the restrictions set forth in Section 4 (Distribution and Redistribution).
+
+For binary-only components, Licensee may decompile or reverse engineer the Licensed Technology only
+to the extent expressly permitted by applicable law, in particular Sections 69c and 69e of the
+German Copyright Act (UrhG) or equivalent provisions of applicable local law.
+
+
+---
+
+6. Intellectual Property
+
+Except for the limited rights expressly granted under this Agreement, all rights, title, and
+interest in and to the Licensed Technology, including all intellectual property rights, remain
+exclusively with Licensor.
+
+Licensee may not remove or alter any copyright notices, proprietary legends, or identification
+marks contained in the Licensed Technology.
+
+
+---
+
+7. Warranty, Disclaimer, and Limitation of Liability
+
+THE LICENSED TECHNOLOGY IS PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND. LICENSOR DISCLAIMS ALL
+WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, AND NON-INFRINGEMENT.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LICENSOR SHALL NOT BE LIABLE FOR ANY DAMAGES
+ARISING FROM THE USE OF OR INABILITY TO USE THE LICENSED TECHNOLOGY, INCLUDING DIRECT, INDIRECT,
+INCIDENTAL, CONSEQUENTIAL, OR SPECIAL DAMAGES.
+
+7.1 No Implied License
+
+Except for the rights expressly granted under this Agreement, nothing herein shall be construed to
+grant Licensee any license or right, whether by implication, estoppel, or otherwise, to any
+intellectual property of Licensor, including patents, copyrights, trademarks, or trade secrets.
+
+7.2 Support and Maintenance
+
+Licensor has no obligation under this Agreement to provide support, maintenance, updates,
+enhancements, or future versions of the Licensed Technology.
+
+7.3 Injunctive Relief
+
+Licensee acknowledges that unauthorized distribution, commercial operation, or other use of the
+Licensed Technology beyond the scope of this Agreement may cause irreparable harm to Licensor for
+which monetary damages may be insufficient. Licensor shall be entitled to seek injunctive or
+equitable relief, in addition to any other remedies available at law or in equity.
+
+
+---
+
+8. Third-Party Rights and Patents
+
+Licensee acknowledges that the field of geometry processing and visualization may involve patents
+or other third-party intellectual property rights. Licensor does not guarantee freedom to operate
+and has not conducted patent clearance.
+
+It is Licensee’s responsibility to assess whether a particular use of the Licensed Technology
+infringes third-party rights.
+
+
+---
+
+9. Export Control
+
+Licensee shall comply with all applicable export control laws and regulations of the European
+Union, the United States, and other applicable jurisdictions.
+
+
+---
+
+10. Termination
+
+This Agreement remains in effect until terminated.
+
+Licensor may terminate this Agreement with immediate effect if Licensee violates any provision of
+this Agreement, without prejudice to any rights or claims accrued prior to termination.
+
+Upon termination, Licensee shall immediately cease all use of the Licensed Technology and destroy
+or permanently delete all copies in its possession or control.
+
+Copies that are infeasible to delete using commercially reasonable efforts, including archival
+backups or system snapshots not reasonably accessible in the ordinary course of operations, may be
+retained solely for record-keeping or legal compliance purposes.
+
+Any retained copies shall remain subject to this Agreement and shall not be accessed, used,
+restored, reactivated, or relied upon for any purpose.
+
+The provisions of Sections 6 (Intellectual Property), 7 (Warranty, Disclaimer, and Limitation of
+Liability), 7.1 (No Implied License), 7.3 (Injunctive Relief), 8 (Third-Party Rights and Patents),
+11 (Applicable Law and Jurisdiction), and 13 (General Provisions) shall survive termination of this
+Agreement.
+
+
+---
+
+11. Applicable Law and Jurisdiction
+
+This Agreement shall be governed by and construed in accordance with the laws of the Federal
+Republic of Germany, excluding its conflict-of-laws rules.
+
+The exclusive place of jurisdiction for all disputes arising out of or in connection with this
+Agreement shall be Aachen, Germany, unless mandatory law provides otherwise.
+
+
+---
+
+12. Publicity, Discussion, and Attribution
+
+Licensee is free to discuss, review, benchmark, and share experiences with the Licensed Technology,
+including in public forums, presentations, publications, and academic or technical materials.
+
+Such discussions and publications must not:
+a) disclose confidential or proprietary information of Licensor that is not publicly available;
+b) disclose source code or non-public technical implementation details of the Licensed Technology;
+c) state or imply that Licensor has endorsed, certified, approved, or entered into a partnership,
+   sponsorship, or formal agreement with Licensee, unless expressly agreed to in writing.
+
+This Agreement does not impose any obligation of confidentiality on information that is publicly
+available or independently developed by Licensee.
+
+Subject to compliance with this Agreement, Licensor grants Licensee a limited, non-exclusive,
+non-transferable, and revocable right to use the name “Solidean” and Licensor’s unmodified Solidean
+logo solely to indicate factual use of the Licensed Technology, including phrases such as “Powered
+by Solidean” or “Uses Solidean”, in documentation, marketing materials, user interfaces, or public
+communications, provided that:
+
+a) such use is truthful, accurate, and not misleading;
+b) such use does not imply endorsement, certification, partnership, or sponsorship by Licensor;
+c) the logo is used only in an attribution or secondary context and is not displayed more
+   prominently than Licensee’s own branding; and
+d) Licensor may revoke this permission at any time upon written notice.
+
+No other rights to Licensor’s trademarks, service marks, or branding are granted under this
+Agreement. Licensor encourages, but does not require, Licensees to include such attribution where
+reasonably appropriate.
+
+
+---
+
+13. General Provisions
+
+If any provision of this Agreement is held to be unenforceable, the remaining provisions shall
+remain in full force and effect.
+
+No waiver or modification of this Agreement shall be binding unless made in writing and signed by
+an authorized representative of Licensor.
+
+This Agreement constitutes the entire agreement between the parties concerning the Licensed
+Technology and supersedes all prior agreements relating to its subject matter.
+
+
+---
+
+If you do not agree to these terms, do not use the Licensed Technology.
+
+Shaped Code GmbH
+solidean@shapedcode.com
+Community Edition
+Version 2026-02-07

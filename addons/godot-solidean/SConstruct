@@ -1,0 +1,66 @@
+#!/usr/bin/env python
+import os
+import sys
+
+from SCons.Errors import UserError
+
+# User has to pass solidean path in command
+solidean_path = ARGUMENTS.get("solidean_path", None)
+if not solidean_path:
+    raise UserError("You must pass solidean_path=<dir>")
+
+if not os.path.isdir(solidean_path):
+    raise UserError(f"solidean_path is not a valid directory: {solidean_path}")
+
+print("Using solidean_path:", solidean_path)
+
+# Remove the variable so Godot's SConstruct does not warn about it
+del ARGUMENTS["solidean_path"]
+
+env = SConscript("extern/godot-cpp/SConstruct")
+
+# For reference:
+# - CCFLAGS are compilation flags shared between C and C++
+# - CFLAGS are for C-specific compilation flags
+# - CXXFLAGS are for C++-specific compilation flags
+# - CPPFLAGS are for pre-processor flags
+# - CPPDEFINES are for pre-processor defines
+# - LINKFLAGS are for linking flags
+
+env.Append(
+    CPPPATH=[
+        os.path.join(solidean_path, "lang/cpp17/include"),
+    ]
+)
+env.Append(
+    LIBPATH=[
+        # TODO WARNING May need to change this for different OS/platform?
+        os.path.join(solidean_path, "lib/windows/")
+    ]
+)
+
+env.Append(LIBS=["solidean"])
+
+# Required for try/catch exception handling
+# Add /EHsc only if using MSVC
+if env["CC"] == "cl" or env["CXX"] == "cl":
+    env.Append(CXXFLAGS=["/EHsc"])
+# env.Append(CXXFLAGS=["/std:c++17"])
+
+env.dev_build = False
+env.debug_features = False
+env["optimize"] = "speed"
+env["debug_symbols"] = False
+env["target"] = "template_release"
+env.Append(CCFLAGS=["/O2"])
+
+env.Append(LINKFLAGS=["/OPT:REF"])
+
+sources = Glob("src/*.cpp")
+
+library = env.SharedLibrary(
+    "bin/solideanGodotBridge",
+    source=sources,
+)
+
+Default(library)

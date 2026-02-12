@@ -1,0 +1,31 @@
+# Godot 4+ specific ignores
+.godot/
+
+# build folder (allow for .txt)
+build/*
+!build/
+!build/*.txt
+
+
+# binaries and libraries
+addons/godot-solidean/bin/*.dll
+addons/godot-solidean/bin/*.exp
+addons/godot-solidean/bin/*.lib
+
+# compilation files
+addons/godot-solidean/src/*.obj
+
+# SCons stuff
+.sconsign.dblite
+
+# Godot temp stuff
+*.uid
+*.import
+*.tmp
+*.bin
+
+.vscode
+.editorconfig
+compile_commands.json
+*.depren
+*.blend

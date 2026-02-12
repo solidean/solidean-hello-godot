@@ -1,0 +1,10 @@
+Third Party Assets
+==================
+
+Sculpture of a Woman
+--------------------
+Source: https://www.thingiverse.com/thing:26317
+Author: Karl_Williams
+License: Creative Commons Attribution 4.0 (CC BY 4.0)
+         https://creativecommons.org/licenses/by/4.0/
+Modifications: Converted from STL to OBJ format, scaled down, moved origin to bottom of model
