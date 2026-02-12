@@ -1,5 +1,7 @@
 # Solidean - Hello Godot
 
+https://github.com/user-attachments/assets/74b22db3-82ad-4423-80ee-cfa92131cec9
+
 Prebuilt binaries for this example: https://solidean.com/download/godot-demo/
 
 ## Getting started (compiling yourself)
