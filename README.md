@@ -1,6 +1,8 @@
 # Solidean - Hello Godot
 
-## Getting started
+Prebuilt binaries for this example: https://solidean.com/download/godot-demo/
+
+## Getting started (compiling yourself)
 
 * download the Solidean Community Edition
   https://solidean.com/download/solidean/
