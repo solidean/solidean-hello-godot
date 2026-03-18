@@ -85,10 +85,6 @@ public:
     double getExecuteTimeMs() const;
     double getExportTimeMs() const;
 
-    /// Writes the first surface of a MeshInstance3D to an OBJ file.
-    /// Returns false on null mesh, missing geometry, or file I/O failure.
-    bool export_to_obj(MeshInstance3D* mesh, String const& path);
-
     /// Removes a mesh's cache entry.
     /// Must be called before freeing a MeshInstance3D that was used in an
     /// operation, to avoid dangling pointers and leaked memory in the cache.

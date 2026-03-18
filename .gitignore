@@ -19,7 +19,6 @@ addons/godot-solidean/src/*.obj
 .sconsign.dblite
 
 # Godot temp stuff
-*.uid
 *.import
 *.tmp
 *.bin

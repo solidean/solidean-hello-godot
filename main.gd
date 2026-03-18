@@ -36,7 +36,7 @@ const RAYCAST_DISTANCE := 100.0
 const TOOL_SCALE_SPEED := 0.1
 
 const PARTICLE_IMPULSE_STRENGTH := 5.0
-const PARTICLE_COLLISION_DELAY := 0.0 # Seconds before enabling particle collisions
+const PARTICLE_COLLISION_SCALE := 0.9 # Scale factor for particle collision shapes
 const PHYSICS_LAYER_SCULPTURE := 2 # Layer 3 (1 << 2)
 const SCULPT_HOLD_INTERVAL := 0.2
 
@@ -134,9 +134,6 @@ func _load_current_model() -> void:
 		sculpture_triangles = solidean_helper.getNumTrianglesLastOperation()
 		_recreate_collision()
 		update_ui()
-		
-		# Optionally export the mesh as an .obj
-		# solidean_helper.export_to_obj(sculpture, "solidean-result.obj")
 
 func _color_timing(ms: float, interval_width = 5.0) -> String:
 	"""Returns color name based on timing value (0-5ms: light green, 5-10ms: yellow, 10ms+: red)"""
@@ -344,9 +341,29 @@ func _create_particle_rigid_body(particle_mesh: MeshInstance3D) -> RigidBody3D:
 	
 	# Attach mesh to rigid body
 	rigid_body.add_child(particle_mesh)
-	
+
+	# Scale down only the collision shapes to prevent sticking, keep mesh at original size
+	# Must adjust position to compensate for center of mass shift
+	for child in rigid_body.get_children():
+		if child is CollisionShape3D:
+			var shape := child.shape as ConvexPolygonShape3D
+			if shape:
+				# Calculate the center of mass of the convex shape's vertices
+				var points := shape.points
+				var center := Vector3.ZERO
+				for point in points:
+					center += point
+				center /= points.size()
+
+				# Scale the collision shape
+				child.scale = Vector3.ONE * PARTICLE_COLLISION_SCALE
+
+				# Adjust position to keep center of mass fixed
+				# When scaling by s, a point at c moves to s*c, so we offset by c*(1-s)
+				child.position += center * (1.0 - PARTICLE_COLLISION_SCALE)
+
 	# Apply initial velocity along surface normal
-	rigid_body.linear_velocity = (raycast_surface_normal + Vector3.UP).normalized() * PARTICLE_IMPULSE_STRENGTH
+	rigid_body.linear_velocity = raycast_surface_normal * PARTICLE_IMPULSE_STRENGTH
 	
 	# Apply material
 	particle_mesh.mesh.surface_set_material(0, particles_material)

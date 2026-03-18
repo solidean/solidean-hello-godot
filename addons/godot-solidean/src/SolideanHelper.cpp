@@ -759,78 +759,6 @@ double SolideanHelper::getExportTimeMs() const
     return last_operation_stats_.export_time_ms;
 }
 
-// === OBJ Export ===
-
-bool SolideanHelper::export_to_obj(MeshInstance3D* mesh, String const& path)
-{
-    if (!mesh)
-    {
-        UtilityFunctions::push_error("SolideanHelper: Null mesh in export_to_obj");
-        return false;
-    }
-
-    Ref<Mesh> godot_mesh = mesh->get_mesh();
-    if (!godot_mesh.is_valid() || godot_mesh->get_surface_count() == 0)
-    {
-        UtilityFunctions::push_error("SolideanHelper: Invalid or empty mesh in export_to_obj");
-        return false;
-    }
-
-    Ref<FileAccess> file = FileAccess::open(path, FileAccess::WRITE);
-    if (!file.is_valid())
-    {
-        UtilityFunctions::push_error("SolideanHelper: Failed to open file: ", path);
-        return false;
-    }
-
-    file->store_line("# Exported by SolideanHelper");
-
-    // Read first surface data
-    Array const surface_arrays = godot_mesh->surface_get_arrays(0);
-    PackedVector3Array const vertices = surface_arrays[Mesh::ARRAY_VERTEX];
-    PackedVector3Array const normals = surface_arrays[Mesh::ARRAY_NORMAL];
-    PackedInt32Array const indices = surface_arrays[Mesh::ARRAY_INDEX];
-
-    // Write vertices
-    for (int i = 0; i < vertices.size(); ++i)
-    {
-        Vector3 const& v = vertices[i];
-        file->store_line(vformat("v %f %f %f", v.x, v.y, v.z));
-    }
-
-    // Write normals
-    for (int i = 0; i < normals.size(); ++i)
-    {
-        Vector3 const& n = normals[i];
-        file->store_line(vformat("vn %f %f %f", n.x, n.y, n.z));
-    }
-
-    // Write faces (OBJ indices are 1-based)
-    if (indices.is_empty())
-    {
-        // Triangle soup -> every 3 vertices form a face
-        for (int i = 0; i < vertices.size(); i += 3)
-        {
-            file->store_line(vformat("f %d//%d %d//%d %d//%d", i + 1, i + 1, i + 2, i + 2, i + 3, i + 3));
-        }
-    }
-    else
-    {
-        // Indexed mesh
-        for (int i = 0; i < indices.size(); i += 3)
-        {
-            int i0 = indices[i] + 1;
-            int i1 = indices[i + 1] + 1;
-            int i2 = indices[i + 2] + 1;
-            file->store_line(vformat("f %d//%d %d//%d %d//%d", i0, i0, i1, i1, i2, i2));
-        }
-    }
-
-    UtilityFunctions::print("SolideanHelper: Exported mesh to ", path, " (", vertices.size(), " vertices, ",
-                            indices.size() / 3, " triangles)");
-    return true;
-}
-
 // === Binding ===
 
 void SolideanHelper::_bind_methods()
@@ -861,8 +789,6 @@ void SolideanHelper::_bind_methods()
     ClassDB::bind_method(D_METHOD("getExportTimeMs"), &SolideanHelper::getExportTimeMs);
 
     ClassDB::bind_method(D_METHOD("clear_cache_entry", "mesh"), &SolideanHelper::clear_cache_entry);
-
-    ClassDB::bind_method(D_METHOD("export_to_obj", "mesh", "path"), &SolideanHelper::export_to_obj);
 
     ClassDB::bind_method(D_METHOD("set_arithmetic_range", "range"), &SolideanHelper::set_arithmetic_range);
 

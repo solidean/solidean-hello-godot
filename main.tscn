@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c4qlisnrry8tx"]
+[gd_scene format=3 uid="uid://c4qlisnrry8tx"]
 
 [ext_resource type="Script" uid="uid://clp63cu584b8" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Shader" uid="uid://nn20f4l2d3f2" path="res://wireframe.gdshader" id="2_1bvp3"]
@@ -37,16 +37,16 @@ sky_material = SubResource("ProceduralSkyMaterial_lquwl")
 background_mode = 2
 sky = SubResource("Sky_7mycd")
 
-[node name="Main" type="Node3D"]
+[node name="Main" type="Node3D" unique_id=1722855104]
 script = ExtResource("1_0xm2m")
 sphere_radial_segments = 16
 sphere_rings = 8
 
-[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("cam_target")]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=305933901 node_paths=PackedStringArray("cam_target")]
 script = ExtResource("3_h2yge")
 cam_target = NodePath("../Sculpture")
 
-[node name="UI" type="Control" parent="."]
+[node name="UI" type="Control" parent="." unique_id=564798117]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,7 +55,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="MarginContainerTL" type="MarginContainer" parent="UI"]
+[node name="MarginContainerTL" type="MarginContainer" parent="UI" unique_id=1518585005]
 layout_mode = 1
 offset_right = 17.0
 offset_bottom = 39.0
@@ -63,17 +63,17 @@ mouse_filter = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 
-[node name="Container" type="VBoxContainer" parent="UI/MarginContainerTL"]
+[node name="Container" type="VBoxContainer" parent="UI/MarginContainerTL" unique_id=83341587]
 layout_mode = 2
 
-[node name="Timings" type="RichTextLabel" parent="UI/MarginContainerTL/Container"]
+[node name="Timings" type="RichTextLabel" parent="UI/MarginContainerTL/Container" unique_id=1338838556]
 layout_mode = 2
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[node name="MarginContainerTR" type="MarginContainer" parent="UI"]
+[node name="MarginContainerTR" type="MarginContainer" parent="UI" unique_id=1448826522]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -85,20 +85,20 @@ mouse_filter = 2
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 
-[node name="Container" type="VBoxContainer" parent="UI/MarginContainerTR"]
+[node name="Container" type="VBoxContainer" parent="UI/MarginContainerTR" unique_id=587585119]
 layout_mode = 2
 
-[node name="FPS" type="Label" parent="UI/MarginContainerTR/Container"]
+[node name="FPS" type="Label" parent="UI/MarginContainerTR/Container" unique_id=550662723]
 layout_mode = 2
 text = "FPS: 145.0
 "
 horizontal_alignment = 2
 
-[node name="ResetButton" type="Button" parent="UI/MarginContainerTR/Container"]
+[node name="ResetButton" type="Button" parent="UI/MarginContainerTR/Container" unique_id=692676708]
 layout_mode = 2
 text = "Reset model"
 
-[node name="MarginContainerBL" type="MarginContainer" parent="UI"]
+[node name="MarginContainerBL" type="MarginContainer" parent="UI" unique_id=125301116]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -112,34 +112,34 @@ theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 0
 theme_override_constants/margin_bottom = 16
 
-[node name="Container" type="VBoxContainer" parent="UI/MarginContainerBL"]
+[node name="Container" type="VBoxContainer" parent="UI/MarginContainerBL" unique_id=364973163]
 layout_mode = 2
 
-[node name="TitleStatue" type="Label" parent="UI/MarginContainerBL/Container"]
+[node name="TitleStatue" type="Label" parent="UI/MarginContainerBL/Container" unique_id=2018267688]
 layout_mode = 2
 text = "Model:"
 
-[node name="StatsStatue" type="Label" parent="UI/MarginContainerBL/Container"]
+[node name="StatsStatue" type="Label" parent="UI/MarginContainerBL/Container" unique_id=1766953861]
 layout_mode = 2
 
-[node name="WireframeStatue" type="CheckBox" parent="UI/MarginContainerBL/Container"]
+[node name="WireframeStatue" type="CheckBox" parent="UI/MarginContainerBL/Container" unique_id=390344276]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Wireframe"
 
-[node name="Title" type="Label" parent="UI/MarginContainerBL/Container"]
+[node name="Title" type="Label" parent="UI/MarginContainerBL/Container" unique_id=41758353]
 layout_mode = 2
 text = "Particles:"
 
-[node name="Stats" type="Label" parent="UI/MarginContainerBL/Container"]
+[node name="Stats" type="Label" parent="UI/MarginContainerBL/Container" unique_id=543571263]
 layout_mode = 2
 
-[node name="Wireframe" type="CheckBox" parent="UI/MarginContainerBL/Container"]
+[node name="Wireframe" type="CheckBox" parent="UI/MarginContainerBL/Container" unique_id=855666872]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Wireframe"
 
-[node name="MarginContainerBR" type="MarginContainer" parent="UI"]
+[node name="MarginContainerBR" type="MarginContainer" parent="UI" unique_id=1238674167]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -154,36 +154,36 @@ mouse_filter = 2
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="Info" type="Label" parent="UI/MarginContainerBR"]
+[node name="Info" type="Label" parent="UI/MarginContainerBR" unique_id=2020420153]
 layout_mode = 2
 text = "LMB: apply tool
 MMB: orbit
 Mouse wheel (+ shift): zoom (resize tool)"
 horizontal_alignment = 2
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=651269911]
 transform = Transform3D(-0.932362, 0.09704656, 0.3482572, 0.22308776, -0.6035845, 0.76545256, 0.2844872, 0.79137075, 0.5411094, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Tool" type="MeshInstance3D" parent="."]
+[node name="Tool" type="MeshInstance3D" parent="." unique_id=168414320]
 visible = false
 mesh = SubResource("SphereMesh_h2yge")
 surface_material_override/0 = SubResource("StandardMaterial3D_h2yge")
 
-[node name="Sculpture" type="MeshInstance3D" parent="."]
+[node name="Sculpture" type="MeshInstance3D" parent="." unique_id=1987659298]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.034678936, 0)
 material_override = SubResource("StandardMaterial3D_1bvp3")
 
-[node name="Floor" type="StaticBody3D" parent="."]
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1617472327]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=776727049]
 shape = SubResource("WorldBoundaryShape3D_0xm2m")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=309116951]
 transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0)
 mesh = SubResource("PlaneMesh_ig7tw")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2064982219]
 environment = SubResource("Environment_lquwl")
 
 [connection signal="toggled" from="UI/MarginContainerBL/Container/WireframeStatue" to="." method="_on_wireframe_toggled"]
